@@ -41,6 +41,7 @@ This guide explains two ways to install **Terraform** on Windows:
 	[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
 	iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 	
+	```
 	Close and reopen PowerShell after installation.
 
 
