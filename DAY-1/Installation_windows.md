@@ -37,28 +37,29 @@ This guide explains two ways to install **Terraform** on Windows:
 Chocolatey makes installation and updates much easier.
 
 ---
- ✅ Step 1: Install Chocolatey
+1: Install Chocolatey
 
-	Open **PowerShell (Admin)** and run the following command:
+	**Open PowerShell (Admin) and run the following command:**
 
 	```powershell
-	Set-ExecutionPolicy Bypass -Scope Process -Force; `
-	[System.Net.ServicePointManager]::SecurityProtocol = `
-	[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
-	iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
+		Set-ExecutionPolicy Bypass -Scope Process -Force; `
+		[System.Net.ServicePointManager]::SecurityProtocol = `
+		[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+		iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+	```
 	Close and reopen PowerShell after installation.
 
 
-Step 2: Install Terraform
+2: **Install Terraform**
 	```powershell
 	choco install terraform -y
 
-Step 3: Verify Installation
+
+3: **Verify Installation**
 	```powershell
 	terraform -version
 
 
-Step 4: Update Terraform
+4: **Update Terraform**
 	```powershell
 	choco upgrade terraform -y
