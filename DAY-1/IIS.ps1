@@ -1,3 +1,11 @@
-import-module servermanager
-add-windowsfeature web-server -includeallsubfeature
-Set-Content -Path "C:\inetpub\wwwroot\Default.html" -Value "<html><body><h1>IIS is installed and running! 1 $env:COMPUTERNAME</h1></body></html>" -Encoding UTF8
+try {
+    Import-Module ServerManager
+    Add-WindowsFeature Web-Server -IncludeAllSubFeature
+    Set-Content -Path "C:\inetpub\wwwroot\Default.html" -Value "Hello World"
+}
+catch {
+    Write-Host "Error occurred: $_"
+}
+finally {
+    Exit 0
+}
